@@ -1,0 +1,45 @@
+#image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#image-gallery {
+    margin-top: 10%;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.gallery-item {
+    border: solid red;
+}
+
+h1 {
+    text-align: center;
+    color: rgba(255, 0, 0, 0.8);
+}
+
+h3 {
+    text-align: center;
+    color: rgba(0, 255, 0, 0.8);
+}
+
+figure {
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 0.75em;
+    color: rgba(0, 0, 255, 0.8);
+}
+
+
+#last_div {
+    width: 100%;
+    margin-top: 60px;
+    float: right;
+    margin-bottom: 20px;
+}
