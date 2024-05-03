@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="King_Mod10_3.css">
+    <script>
+        function toggleCaveImage() {
+            var caveImage = document.getElementsByName("cave")[0];
+            var currentSrc = caveImage.src;
+            var newSrc = currentSrc.includes("cave_01.jpg") ? "images/cave_02.jpg" : "images/cave_01.jpg";
+            caveImage.src = newSrc;
+        }
+
+        function toggleMoonImage() {
+            var moonImage = document.getElementsByName("moon")[0];
+            var currentSrc = moonImage.src;
+            var newSrc = currentSrc.includes("moon_01.jpg") ? "images/moon_02.jpg" : "images/moon_01.jpg";
+            moonImage.src = newSrc;
+        }
+    </script>
+</head>
+<body>
+<div id="container">
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+    <br />
+    <div>
+      <a href="#">
+        <img border="0" name="cave" src="images/cave_02.jpg">
+      </a>
+      <br>
+      <button onclick="toggleCaveImage()">Toggle Cave Image</button>
+    </div>
+    <br />
+    <div>
+      <a href="#">
+        <img border="0" name="moon" src="images/moon_02.jpg" onclick="toggleMoonImage()">
+      </a>
+    </div>
+    <br />
+    <div
+         onmouseover="this.style.color='red';"
+         onmouseout="this.style.color='black';">
+
+      Click on the image to change.
+      <br />
+      Right-click and select View Source for more details.
+
+    </div>
+    <div id="last_div">
+        <a href="https://tayking.github.io/csd-340/">Back to Landing Page</a>
+    </div>
+</div>
+</body>
+</html>
