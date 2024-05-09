@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#entryList {
+    margin-top: 20px;
+}
+
+#entryList p {
+    margin: 5px 0;
+}
+
+#last_div {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 200px;
+    margin-bottom: 20px;
+}
