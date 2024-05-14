@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="King_Mod12_2.css">
+    <script>
+        window.onload = function () {
+            const bookTitles = [
+                "Harry Potter",
+                "The Hobbit",
+                "The Da Vinci Code",
+                "How to Win Friends and Influence People",
+                "Gone with the Wind",
+                "The Hunger Games",
+                "The 7 Habits of Highly Effective People",
+                "Adventures of Huckleberry Finn",
+                "The Hitchhiker's Guide to the Galaxy",
+                "A Song of Ice and Fire"
+            ];
+
+            function displayBooks(order) {
+                const bookList = document.getElementById('bookList');
+                bookList.innerHTML = '';
+                if (order === 'asc') {
+                    bookTitles.forEach(function (title) {
+                        const li = document.createElement('li');
+                        li.textContent = title;
+                        bookList.appendChild(li);
+                    });
+                } else if (order === 'desc') {
+                    for (let i = bookTitles.length - 1; i >= 0; i--) {
+                        const li = document.createElement('li');
+                        li.textContent = bookTitles[i];
+                        bookList.appendChild(li);
+                    }
+                }
+            }
+
+            document.getElementById('topToBottom').addEventListener('click', function () {
+                displayBooks('asc');
+            });
+
+            document.getElementById('bottomToTop').addEventListener('click', function () {
+                displayBooks('desc');
+            });
+
+            displayBooks('asc');
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h1>Assignment 12.2: JavaScript - Part 4</h1>
+        <div id="left_div">
+            <h3>Top 10 Favorite Books</h3>
+            <button id="topToBottom">Top to Bottom</button>
+            <button id="bottomToTop">Bottom to Top</button>
+            <hr/>
+            <ol id="bookList"></ol>
+        </div>
+        <div id="right_div">
+            <h3>5 Things I've Learned Since the Course Started</h3>
+            <ul>
+                <li>Github Pages</li>
+                <li>HTML meta tags</li>
+                <li>Stylesheets</li>
+                <li>Side by side Divs</li>
+                <li>psuedo classes</li>
+            </ul>
+        </div>
+    </div>
+    <div id="last_div">
+        <a href="https://tayking.github.io/csd-340/">Back to Landing Page</a>
+    </div>
+</body>
+</html>
